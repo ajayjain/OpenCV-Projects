@@ -1,4 +1,7 @@
-OpenCV-Projects
-===============
+OpenCV Computer vision programs
+================
 
-Assorted computer vision projects using C++ and OpenCV
+### threshold.cpp - Threshold a color image from your webcam
+Language: C++  
+Author: Ajay Jain  
+Date: 22 July 2013
