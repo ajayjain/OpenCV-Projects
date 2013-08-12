@@ -1,6 +1,11 @@
 OpenCV Computer vision programs
 ================
 
+#### haar-face-detect.cpp - Detect & track faces (or noses, or eyes, or ears, or mouths, or ...)
+- **Language:** C++
+- **Author:** Ajay Jain
+- **Date written:** 19 July 2013
+
 #### edges.cpp - Finds edges from your webcam with adjustable blur size (ie noise reduction)
 - **Language:** C++
 - **Author:** Ajay Jain
