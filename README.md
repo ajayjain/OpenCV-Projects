@@ -1,7 +1,7 @@
 OpenCV Computer vision programs
 ================
 
-#### haar-face-detect.cpp - Detect & track faces (or noses, or eyes, or ears, or mouths, or ...)
+#### haar-face-detect.cpp - Detect & track faces (or noses, or eyes, or ears, or mouths, or anything if you have the xml data files)
 - **Language:** C++
 - **Author:** Ajay Jain
 - **Date written:** 19 July 2013
