@@ -3,6 +3,7 @@
 // haar-face-detect.cpp
 // Detect faces with OpenCV
 
+#include <cstdio>
 #include <string>
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -31,7 +32,7 @@ void detectFaces(Mat &input, Mat &output)
 	vector<Rect> objects;
 	cascade.detectMultiScale(output, objects);
 
-	printf("\n======================================\n");
+	::printf("\n======================================\n");
 
 	for (Rect r : objects) {
 		printf("x: %d, y: %d, width: %d, height: %d \n", r.x, r.y, r.width, r.height);
@@ -53,7 +54,7 @@ int main(int argc, char** argv)
 	// Open and initailize camera
 	VideoCapture cap(0);
 	if (!cap.isOpened()) {
-		printf("Couldn't open webcam \n");
+		::printf("Couldn't open webcam \n");
 		return -1;
 	}
 
@@ -65,7 +66,7 @@ int main(int argc, char** argv)
 		cap >> frame;
 
 		if (!frame.data) {
-			printf("No frame data \n");
+			::printf("No frame data \n");
 			return -1;
 		}
 		
