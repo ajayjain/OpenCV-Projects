@@ -1,7 +1,8 @@
 from __future__ import print_function
 import requests
-from StringIO import StringIO
-from PIL import Image
+# from StringIO import StringIO
+# from PIL import Image
+import SimpleCV
 import cv2
 import numpy as np
 
@@ -10,7 +11,7 @@ def image_url(app_id):
 	request = requests.get(url)
 	return request.json()["results"][0]["artworkUrl60"]
 
-def load_image(url):
+def load_image_requests(url):
 	raw = StringIO(requests.get(url).content)
 	raw.seek(0)
 	source = Image.open(raw).convert("RGB")
@@ -28,8 +29,10 @@ def waitKey():
 
 APP_ID = "598581396"
 url = image_url(APP_ID)
-im = load_image(url)
-print(im)
+im = SimpleCV.Image(url)
+im.show()
 
-show_image(im, "Original")
-waitKey()
+# print(im)
+
+# show_image(im, "Original")
+# waitKey()
